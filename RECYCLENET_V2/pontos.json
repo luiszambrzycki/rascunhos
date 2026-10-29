@@ -1,0 +1,18 @@
+[{
+    "nome": "Rio dos sinos",
+    "tipo": "Papel e plástico", 
+    "lat": -29.76,
+    "lng": -51.14
+},
+{   
+    "nome": "Campina",
+    "tipo": "Vidro",
+    "lat": -29.745122275424336,
+    "lng": -51.158691297623434
+},
+{   
+    "nome": "Scharlau",
+    "tipo": "Organico",
+    "lat": -29.737331305077166,
+    "lng": -51.150035057165525
+}]
