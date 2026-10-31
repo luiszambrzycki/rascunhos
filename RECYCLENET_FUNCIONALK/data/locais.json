@@ -1,0 +1,15 @@
+{
+  "fonte": "Lista oficial do governo (preencher com o link)",
+  "atualizado_em": "AAAA-MM-DD",
+  "locais": [
+    {
+      "id": 1,
+      "nome": "EXEMPLO - substituir pelos locais reais",
+      "endereco": "Centro, São Leopoldo - RS",
+      "materiais": ["papel", "plastico", "vidro", "metal"],
+      "horario": "Seg a Sex, 8h às 17h",
+      "lat": -29.7603,
+      "lng": -51.1472
+    }
+  ]
+}

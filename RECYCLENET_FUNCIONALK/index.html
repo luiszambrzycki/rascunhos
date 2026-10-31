@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RecycleNet | Coleta seletiva em São Leopoldo</title>
+  <meta name="description" content="Encontre pontos de coleta seletiva em São Leopoldo e aprenda a separar seu lixo corretamente.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topo">
+    <div class="container topo__linha">
+      <a class="marca" href="#inicio">RecycleNet</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+      <!-- NAVBAR: edite os links aqui. O href precisa bater com o id da seção. -->
+      <nav id="menu" class="menu" aria-label="Principal">
+        <a href="#mapa">Onde reciclar</a>
+        <a href="#separar">Como separar</a>
+        <a href="#porque">Por que reciclar</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+  <div class="container">
+    <h1>Em qual bairro você deseja reciclar?</h1>
+    <label for="pesquisa" class="oculto">Nome do bairro</label>
+    <input type="text" id="pesquisa" list="lista-bairros"
+           placeholder="Digite o nome do bairro" autocomplete="off">
+    <datalist id="lista-bairros"></datalist>
+    <div id="resultado" aria-live="polite"></div>
+  </div>
+</section>
+
+    <section id="mapa" class="secao">
+      <div class="container">
+        <h2>Onde reciclar</h2>
+        <p class="lead">Filtre pelo material que você quer descartar.</p>
+        <div class="filtros" id="filtros" role="group" aria-label="Filtrar por material"></div>
+        <div class="mapa-grid">
+          <div id="map" role="region" aria-label="Mapa dos pontos de coleta"></div>
+          <ul id="lista" class="lista" aria-live="polite"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="separar" class="secao secao--verde">
+      <div class="container">
+        <h2>Como separar</h2>
+        <p class="lead">As cores seguem o padrão nacional da coleta seletiva (Resolução CONAMA 275/2001).</p>
+        <div class="materiais">
+          <article class="material" style="--cor:#1f5fbf">
+            <h3>Papel</h3>
+            <p><strong>Pode:</strong> jornais, revistas, caixas de papelão, folhas, embalagens de papel limpas.</p>
+            <p><strong>Não pode:</strong> papel engordurado, papel higiênico, guardanapo usado, fotografias.</p>
+          </article>
+          <article class="material" style="--cor:#c62828">
+            <h3>Plástico</h3>
+            <p><strong>Pode:</strong> garrafas PET, potes, embalagens, sacolas limpas.</p>
+            <p><strong>Não pode:</strong> embalagens muito sujas, cabos e fios, adesivos, isopor sujo.</p>
+          </article>
+          <article class="material" style="--cor:#2e7d32">
+            <h3>Vidro</h3>
+            <p><strong>Pode:</strong> garrafas, potes e frascos de vidro.</p>
+            <p><strong>Não pode:</strong> espelhos, vidros de janela, cerâmica, lâmpadas.</p>
+          </article>
+          <article class="material" style="--cor:#e0a800">
+            <h3>Metal</h3>
+            <p><strong>Pode:</strong> latas de alumínio e aço, tampas, panelas velhas.</p>
+            <p><strong>Não pode:</strong> latas de tinta ou aerossol com resíduo, pilhas e baterias.</p>
+          </article>
+        </div>
+        <h3 class="sub">Três hábitos que fazem diferença</h3>
+        <ul class="habitos">
+          <li><strong>Esvazie e enxágue rápido.</strong> Resto de comida estraga o material que estava limpo.</li>
+          <li><strong>Mantenha seco.</strong> Papel molhado não é aproveitado.</li>
+          <li><strong>Não precisa lavar com perfeição.</strong> Tirar o excesso já basta.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="porque" class="secao">
+      <div class="container">
+        <h2>Por que reciclar</h2>
+        <div class="colunas">
+          <p>Reciclar reduz a quantidade de lixo enviada aos aterros, poupa matéria-prima e gera renda para quem trabalha com a triagem de materiais.</p>
+          <p>Cada embalagem separada corretamente facilita o trabalho das cooperativas. Cada embalagem misturada com lixo orgânico pode ser perdida.</p>
+        </div>
+        <!-- TODO: adicionar dados reais de São Leopoldo (toneladas coletadas, cooperativas) com a fonte. -->
+      </div>
+    </section>
+
+    <section id="sobre" class="secao secao--verde">
+      <div class="container">
+        <h2>Sobre o RecycleNet</h2>
+        <p>O RecycleNet é um projeto educacional que reúne em um mapa os pontos de coleta seletiva divulgados em listas públicas do governo. Não é um site oficial.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>RecycleNet · Projeto educacional · São Leopoldo, RS</p>
+      <p id="fonte"></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
