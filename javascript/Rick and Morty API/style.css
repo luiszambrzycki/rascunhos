@@ -1,0 +1,17 @@
+#container{
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start; /* Garante que fique no topo */
+    width: max-content;        /* Faz o elemento ter apenas o tamanho do seu próprio conteúdo */
+    margin: 0 auto;
+}
+
+header{
+    background-color: aqua;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start; /* Garante que fique no topo */     /* Faz o elemento ter apenas o tamanho do seu próprio conteúdo */
+    margin: 0 auto;
+}
