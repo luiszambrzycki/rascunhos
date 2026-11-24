@@ -1,0 +1,6 @@
+PUT sozinho (fecha o CRUD).
+schema.sql + pastas + README.
+Rotas de resumo com GROUP BY.
+Tabela de usuários e login real.
+Estilo e gráfico.
+Publicar.
